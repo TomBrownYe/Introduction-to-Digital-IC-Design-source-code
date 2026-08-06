@@ -1,4 +1,4 @@
-module cdc
+module cdc_multi_bit
 (
     input               clk1    ,
     input               rst1_n  ,
@@ -34,8 +34,6 @@ begin
 	else if (vld1)       //把vld1脉冲转为电平
 		vld1_latch <= 1'b1;
 	else if (c_latch_r) //反馈使电平归零
-		vld1_latch <= 1'b0;
-	else
 		vld1_latch <= 1'b0;
 end
 
